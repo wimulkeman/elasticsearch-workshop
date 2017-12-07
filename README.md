@@ -8,7 +8,7 @@ This workshop uses:
 - Kibana 6
 - Docker
 
-Start the workshop by running the command
+Start the workshop by running the command in the root of this project.
 
 ```bash
 docker-compose up
