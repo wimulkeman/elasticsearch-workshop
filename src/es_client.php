@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 include_once 'vendor/autoload.php';
 
 $esClientBuilder = new \Elasticsearch\ClientBuilder();
@@ -94,6 +96,24 @@ function resetEsIndex() {
 
     createEsIndex();
     addDefaultDataToEsIndex();
+}
+
+function buildEsRequest(array $body): array {
+    global $esIndexConfig;
+
+    return [
+        'index' => $esIndexConfig['index'],
+        'type' => $esIndexConfig['type'],
+        'body' => $body
+    ];
+}
+
+function doEsRSearchRequest(array $body): array {
+    global $esClient;
+
+    $request = buildEsRequest($body);
+
+    return $esClient->search($request);
 }
 
 if (!esIndexExists()) {

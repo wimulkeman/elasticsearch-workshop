@@ -1,4 +1,6 @@
 <?php
+include_once 'functions.php';
+
 $defaultPage = 'home.php';
 
 $exercisePages = [];
@@ -9,7 +11,7 @@ foreach ($pages as $page) {
         continue;
     }
 
-    $exercisePage = preg_replace('/\d+_/', '', $page);
+    $exercisePage = getExerciseFilename($page);
     $title = str_replace('.php', '', $exercisePage);
 
     preg_match('/\d+/', $page, $exerciseNumber);
@@ -33,6 +35,8 @@ if (isset($pageRequest['basename'])
     $exercisePages[$page]['active'] = true;
 }
 
-$pageContent = file_get_contents("pages/{$page}");
+ob_start();
+include "pages/{$page}";
+$pageContent = ob_get_clean();
 
 include "layout/base.php";
