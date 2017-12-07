@@ -1,0 +1,102 @@
+<?php
+include_once 'vendor/autoload.php';
+
+$esClientBuilder = new \Elasticsearch\ClientBuilder();
+$esClientBuilder->setHosts(['elasticsearch:9200']);
+
+$esClient = $esClientBuilder->build();
+$esIndexes = $esClient->indices();
+
+$esIndexConfig = [
+    'index' => 'webstores',
+    'type' => 'workshop',
+    'body' => [
+        'settings' => [
+            'number_of_shards' => 1,
+            'number_of_replicas' => 0
+        ]
+    ]
+];
+
+function createEsIndex() {
+    global $esIndexes;
+    global $esIndexConfig;
+
+    $esIndexes->create(array_intersect_key(
+        $esIndexConfig,
+        array_flip(['index', 'body'])
+    ));
+}
+
+function addDefaultDataToEsIndex() {
+    global $esClient;
+    global $esIndexConfig;
+
+    $dataFile = fopen('resources/products.csv', 'r');
+    $headers = ['sku', 'categories', 'family', 'name', 'description'];
+
+    while (($columns = fgetcsv($dataFile, 1600, ';'))) {
+        if (count($headers) !== count($columns)) {
+            continue;
+        }
+
+        $data = array_combine($headers, $columns);
+
+        if ($data['sku'] === 'sku') {
+            continue;
+        }
+
+        $data['categories'] = explode(',', $data['categories']);
+
+        try {
+            $esClient->index(
+                [
+                    'index' => $esIndexConfig['index'],
+                    'type' => $esIndexConfig['type'],
+                    'id' => $data['sku'],
+                    'body' => $data
+                ]
+            );
+        } catch (\Exception $exception) {
+
+        }
+    }
+
+    fclose($dataFile);
+}
+
+function deleteEsIndex() {
+    global $esIndexes;
+    global $esIndexConfig;
+
+    if (esIndexExists()) {
+        $esIndexes->delete(array_intersect_key(
+            $esIndexConfig,
+            array_flip(['index'])
+        ));
+    }
+}
+
+function esIndexExists() {
+    global $esIndexes;
+    global $esIndexConfig;
+
+    return $esIndexes->exists(array_intersect_key(
+        $esIndexConfig,
+        array_flip(['index'])
+    ));
+}
+
+function resetEsIndex() {
+    if (esIndexExists()) {
+        deleteEsIndex();
+    }
+
+    createEsIndex();
+    addDefaultDataToEsIndex();
+}
+
+if (!esIndexExists()) {
+    createEsIndex();
+    addDefaultDataToEsIndex();
+}
