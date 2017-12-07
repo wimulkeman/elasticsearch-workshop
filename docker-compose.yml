@@ -1,0 +1,45 @@
+# Author: Webstores <info@webstores.nl>
+version: "3.3"
+services:
+  httpd:
+    image: webstores/apache2:1.11.0
+    container_name: httpd
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html:ro,cached
+      - ./stack/apache2/conf:/usr/local/apache2/conf:ro,cached
+    depends_on:
+      - php71
+  php71:
+    image: webstores/php71:1.11.0
+    container_name: php71
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./src:/var/www/html:rw,cached
+      - ./data/composer:/home/php/.composer
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.1
+    container_name: elasticsearch
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.0.1
+    links:
+      - elasticsearch
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200

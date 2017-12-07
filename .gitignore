@@ -1,0 +1,5 @@
+data/elasticsearch/
+!data/elasticsearch/.gitkeep
+
+data/composer/
+!data/composer/.gitkeep
