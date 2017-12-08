@@ -14,10 +14,8 @@ foreach ($pages as $page) {
     $exercisePage = getExerciseFilename($page);
     $title = str_replace('.php', '', $exercisePage);
 
-    preg_match('/\d+/', $page, $exerciseNumber);
-
     $exercisePages[$page] = [
-        'number' => $exerciseNumber[0],
+        'number' => getExerciseNumberFromExercisePage($page),
         'title' => str_replace('_', ' ', ucfirst($title)),
     ];
 

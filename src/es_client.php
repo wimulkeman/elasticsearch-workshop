@@ -50,6 +50,8 @@ function addDefaultDataToEsIndex() {
 
         $data['categories'] = explode(',', $data['categories']);
 
+        $data['description'] = strip_tags($data['description']);
+
         try {
             $esClient->index(
                 [
