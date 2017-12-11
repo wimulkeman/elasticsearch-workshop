@@ -37,6 +37,7 @@ services:
       - 9200:9200
   kibana:
     image: docker.elastic.co/kibana/kibana:6.0.1
+    container_name: kibana
     links:
       - elasticsearch
     ports:
