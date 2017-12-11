@@ -177,14 +177,15 @@ echo getHelpResources(
     ?>
 </p>
 
-<h3>1.8 Bonus: Searching all those fields</h3>
+<h3>1.8 Bonus: Gonna catch them all</h3>
 <p>
-    I hear you think, I just have this case where I need to search all of my fields.
-    Do I really need to specify all those fields to search in them?<br>
+    I hear you think, I have this case where I just need all those results. Do I need
+    to query my own database for that?<br>
     Well, you don't &#9786;! Elasticsearch provides a option called <strong>match all</strong>.
+    It returns all the results in your index. Ain't that sweet of Elasticsearch!
 </p>
 <p>
-    Try implementing that, and after implementing it, try searching for a SKU product value.
+    Now go and catch them all!
 </p>
 <p>
     <?php
