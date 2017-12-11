@@ -177,7 +177,7 @@ echo getHelpResources(
     ?>
 </p>
 
-<h3>1.8 Bonus: Gonna catch them all</h3>
+<h3>1.8 Bonus: Gotta catch them all</h3>
 <p>
     I hear you think, I have this case where I just need all those results. Do I need
     to query my own database for that?<br>
