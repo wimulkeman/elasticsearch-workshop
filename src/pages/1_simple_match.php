@@ -37,7 +37,6 @@
 <p>
     You could use for example <strong>lexmark</strong>.
 </p>
-
 <?php
 echo getHelpResources(
     [
@@ -110,7 +109,6 @@ echo getHelpResources(
     echo getResultModal($modalId);
     ?>
 </p>
-
 <?php
 echo getHelpResources(
     [
@@ -151,7 +149,6 @@ echo getHelpResources(
     echo getResultModal($modalId);
     ?>
 </p>
-
 <?php
 echo getHelpResources(
     [
@@ -163,7 +160,7 @@ echo getHelpResources(
 );
 ?>
 
-<h3>1.6 Start searching that description</h3>
+<h3>1.7 Mixing it all up</h3>
 <p>
     Now we know how to search in multiple fields, and how to
     make sure our search terms are both present. Try to combine those
@@ -179,6 +176,35 @@ echo getHelpResources(
     echo getResultModal($modalId);
     ?>
 </p>
+
+<h3>1.8 Bonus: Searching all those fields</h3>
+<p>
+    I hear you think, I just have this case where I need to search all of my fields.
+    Do I really need to specify all those fields to search in them?<br>
+    Well, you don't &#9786;! Elasticsearch provides a option called <strong>match all</strong>.
+</p>
+<p>
+    Try implementing that, and after implementing it, try searching for a SKU product value.
+</p>
+<p>
+    <?php
+    $modalId = 'matchAll';
+
+    echo getQueryForm($modalId, getExerciseFilename(__FILE__));
+    echo getResultModal($modalId);
+    ?>
+</p>
+<?php
+echo getHelpResources(
+    [
+        [
+            'url' => 'https://www.elastic.co/guide/en/elasticsearch/reference/6.0/query-dsl-match-all-query.html',
+            'title' => 'Elasticsearch docs: Match all query'
+        ]
+    ]
+);
+?>
+
 <p>
     You have unlocked a potentially very powerful part of Elasticsearch. Its amazing!<br>
     <?php echo getNextExercisePageHref(__FILE__); ?>

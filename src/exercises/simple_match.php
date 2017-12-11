@@ -7,6 +7,11 @@ $query = $_GET['query'];
 # Edit between these lines
 # --------------------------
 
+// Your start code
+//$body = [
+//    "query" => []
+//];
+
 $body = [
     "query" => []
 ];
