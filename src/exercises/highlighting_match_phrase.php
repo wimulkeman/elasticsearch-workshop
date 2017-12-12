@@ -13,7 +13,9 @@ $query = $_GET['query'];
 //];
 
 $body = [
-    "query" => []
+    "query" => [
+        "match" => ["description" => $query]
+    ]
 ];
 
 # --------------------------
@@ -66,7 +68,7 @@ html;
 foreach ($results['hits']['hits'] as $hit) {
     $record = $hit['_source'];
 
-    $description = mb_strcut($record['description'], 0, 50);
+    $description = implode(' ... ', $hit['highlight']['description']);
 
     echo <<<html
         <tr>
