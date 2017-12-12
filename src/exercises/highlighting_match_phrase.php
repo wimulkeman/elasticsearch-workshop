@@ -14,7 +14,11 @@ $query = $_GET['query'];
 
 $body = [
     "query" => [
-        "match" => ["description" => $query]
+        "match" => [
+            'description' => [
+                'query' => $query
+            ]
+        ]
     ]
 ];
 

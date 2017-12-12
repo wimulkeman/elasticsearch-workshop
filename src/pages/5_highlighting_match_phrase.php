@@ -15,10 +15,11 @@
     was matched by the query.
 </p>
 
-<h3>1.1: Writing our first highlighter</h3>
+<h3>5.1: Writing our first highlighter</h3>
 <p>
     Try writing your first highlighter using the default
-    highlighter from Elasticsearch.
+    highlighter from Elasticsearch. When you're ready, try searching
+    for <strong>lexmark</strong>.
 </p>
 <p>
     <?php
@@ -38,3 +39,44 @@ echo getHelpResources(
     ]
 );
 ?>
+<p>
+    If everything went as planned, you should see the work written
+    cursive in the description column. When the word was found on
+    multiple places, the description now contains a ... as a text
+    separator.
+</p>
+
+<h3>5.2: Make it shine</h3>
+<p>
+    But that ain't pretty! We better do something about that.
+    Update your highlight script to wrap the word found in a
+    <strong>strong</strong> tag.
+</p>
+<?php
+$modalId = 'defaultStrongHighlighter';
+
+echo getQueryForm($modalId, getExerciseFilename(__FILE__));
+echo getResultModal($modalId);
+?>
+<p>
+    That looks better already.
+</p>
+
+<h3>5.3: But here comes the typos</h3>
+<p>
+    Wait, we made it match on exact words! What about typo support?
+    Will that also work? Well, the only way to be sure is to try it out.
+    Add a fuzziness to the match part of the query, and try searching
+    for <strong>lxemark</strong>.
+</p>
+<?php
+$modalId = 'defaultStrongWithFuzzinessHighlighter';
+
+echo getQueryForm($modalId, getExerciseFilename(__FILE__));
+echo getResultModal($modalId);
+?>
+<p>
+    That works also! Is it not awesome? Everything is awesome!
+    <?php echo getNextExercisePageHref(__FILE__); ?>
+</p>
+
