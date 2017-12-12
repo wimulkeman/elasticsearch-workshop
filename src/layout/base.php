@@ -96,5 +96,12 @@ html;
             });
         });
     </script>
+
+    <script src="/resources/js/bootstrap3-typeahead.min.js"></script>
+    <script>
+        if ($('.typeahead') !== undefined) {
+            $('.typeahead').typeahead();
+        }
+    </script>
 </body>
 </html>
