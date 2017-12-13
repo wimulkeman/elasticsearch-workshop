@@ -20,12 +20,12 @@ $body = [
     ]
 ];
 
-//try {
+try {
     $results = doEsRSearchRequest($body);
-//} catch (\Elasticsearch\Common\Exceptions\BadRequest400Exception $exception) {
-//    echo 'Oh boy, seems like your request could not be processed correctly. Check if your syntax is valid.';
-//    return;
-//}
+} catch (\Elasticsearch\Common\Exceptions\BadRequest400Exception $exception) {
+    echo 'Oh boy, seems like your request could not be processed correctly. Check if your syntax is valid.';
+    return;
+}
 
 $totalHits = (int) $results['hits']['total'];
 
