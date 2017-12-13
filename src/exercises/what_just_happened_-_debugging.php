@@ -9,14 +9,15 @@ $query = $_GET['query'];
 
 // Your start code
 //$body = [
-//    "query" => []
+//    "query" => [
+//        "match" => ["name" => $query]
+//    ]
 //];
 
 $body = [
     "query" => [
         "match" => ["name" => $query]
-    ],
-    "explain" => true
+    ]
 ];
 
 # --------------------------
