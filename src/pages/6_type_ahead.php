@@ -10,7 +10,11 @@
 <p>
     Try implementing the type ahead functionality in Elasticsearch.
     When finished, you should receive a list with options when you
-    start typing in the field below. When you start typing
+    start typing in the field below. The suggestion can be placed
+    on the field <strong>name_suggest</strong>.
+</p>
+<p>
+    When you start typing
     <strong>lexmark</strong> or <strong>canon</strong>
     you should see some results.
 </p>

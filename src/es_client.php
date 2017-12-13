@@ -9,6 +9,9 @@ $esClientBuilder->setHosts(['elasticsearch:9200']);
 $esClient = $esClientBuilder->build();
 $esIndexes = $esClient->indices();
 
+// type: keyword > replacedment of type: string && index: not_analyzed
+// type: text > replacement of type: string && index: analyzed
+
 $esIndexConfig = [
     'index' => 'webstores',
     'type' => 'workshop',
@@ -32,13 +35,15 @@ $esIndexConfig = [
                     'name_suggest' => [
                         'type' => 'completion'
                     ],
-                    'categories' => [
-                        'type' => 'text',
-                        'index' => false
-                    ],
                     'family' => [
+                        'type' => 'keyword'
+                    ],
+                    'categories' => [
+                        'type' => 'keyword'
+                    ],
+                    'family_wrongly_mapped' => [
                         'type' => 'text',
-                        'index' => false
+                        'fielddata' => true
                     ]
                 ]
             ]
@@ -75,6 +80,10 @@ function addDefaultDataToEsIndex() {
         }
 
         $data['categories'] = explode(',', $data['categories']);
+        $data['categories'] = str_replace('_', ' ', $data['categories']);
+
+        $data['family'] = str_replace('_', ' ', $data['family']);
+        $data['family_wrongly_mapped'] = $data['family'];
 
         $data['description'] = strip_tags($data['description']);
 

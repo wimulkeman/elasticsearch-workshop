@@ -78,6 +78,20 @@ html;
     return $form;
 }
 
+function getResultButton(string $buttonText, string $modalId, string $actionTarget): string
+{
+    $form = <<<html
+        <button type="button"
+                class="btn btn-primary modal-result-click"
+                data-target="#{$modalId}"
+                data-action="/exercises/{$actionTarget}"
+                data-method="GET"
+        >{$buttonText}</button>
+html;
+
+    return $form;
+}
+
 function getHelpResources(array $resources): string
 {
     $links = '';

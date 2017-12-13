@@ -73,6 +73,8 @@ html;
     <script src="/resources/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    <script src="/resources/js/typeahead.jquery.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('.modal-result-filler').submit(function (event) {
@@ -95,32 +97,47 @@ html;
                     }
                 });
             });
-        });
-    </script>
 
-    <script src="/resources/js/typeahead.jquery.min.js"></script>
-    <script>
-        if ($('.typeahead') !== undefined) {
-            $('.typeahead').typeahead({
-                hint: true,
-                highlight: true,
-                minLength: 1
-            }, {
-                limit: 12,
-                async: true,
-                source: function (query, processSync, processAsync) {
-                    return $.ajax({
-                        url: '/exercises/type_ahead.php',
-                        type: 'GET',
-                        data: {query: query},
-                        dataType: 'json',
-                        success: function (json) {
-                            return processAsync(json);
-                        }
-                    });
-                }
+            $('.modal-result-click').click(function (event) {
+                var $element = $(this);
+                var target = $element.attr('data-target');
+                var content = $(target).find('.modal-body');
+
+                $(content).html("<b>Loading response...</b>");
+
+                $.ajax({
+                    type: $element.attr('data-method'),
+                    url: $element.attr('data-action'),
+
+                    success: function (data, status) {
+                        $(content).html(data);
+                        $(target).modal('show');
+                    }
+                });
             });
-        }
+
+            if ($('.typeahead') !== undefined) {
+                $('.typeahead').typeahead({
+                    hint: true,
+                    highlight: true,
+                    minLength: 1
+                }, {
+                    limit: 12,
+                    async: true,
+                    source: function (query, processSync, processAsync) {
+                        return $.ajax({
+                            url: '/exercises/type_ahead.php',
+                            type: 'GET',
+                            data: {query: query},
+                            dataType: 'json',
+                            success: function (json) {
+                                return processAsync(json);
+                            }
+                        });
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
