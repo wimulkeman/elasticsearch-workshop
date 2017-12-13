@@ -6,7 +6,7 @@
     One fancy aspect of Elasticsearch is the type ahead functionality.
 </p>
 
-<h3>6.1: We fill in each others words</h3>
+<h3>6.1: We complete each other sentences</h3>
 <p>
     Try implementing the type ahead functionality in Elasticsearch.
     When finished, you should receive a list with options when you
