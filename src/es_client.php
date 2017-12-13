@@ -78,6 +78,8 @@ function addDefaultDataToEsIndex() {
 
         $data['description'] = strip_tags($data['description']);
 
+        $data['name_suggest'] = $data['name'];
+
         try {
             $esClient->index(
                 [
