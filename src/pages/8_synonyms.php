@@ -1,5 +1,7 @@
 <h2>8: Synonyms</h2>
 
+<?php echo displayExerciseLocationNotice(__FILE__); ?>
+
 <h3>8.1: Yeah, that's what I meant</h3>
 <p>
     Sometimes you say something, but you mean something else.
