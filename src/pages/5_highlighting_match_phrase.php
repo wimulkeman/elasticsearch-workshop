@@ -76,7 +76,7 @@ echo getQueryForm($modalId, getExerciseFilename(__FILE__));
 echo getResultModal($modalId);
 ?>
 <p>
-    That works also! Is it not awesome? Everything is awesome!
+    That works also! Is it not awesome? Everything is awesome!<br>
     <?php echo getNextExercisePageHref(__FILE__); ?>
 </p>
 

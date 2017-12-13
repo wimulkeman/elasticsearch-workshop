@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="/resources/css/layout.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/highlight/default.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/highlight/darcula.css">
 </head>
@@ -97,39 +98,28 @@ html;
         });
     </script>
 
-    <script src="/resources/js/bootstrap3-typeahead.min.js"></script>
+    <script src="/resources/js/typeahead.jquery.min.js"></script>
     <script>
         if ($('.typeahead') !== undefined) {
             $('.typeahead').typeahead({
                 hint: true,
                 highlight: true,
                 minLength: 1
-            },
-            {
+            }, {
                 limit: 12,
                 async: true,
                 source: function (query, processSync, processAsync) {
-                    processSync(['This suggestion appears immediately', 'This one too']);
                     return $.ajax({
                         url: '/exercises/type_ahead.php',
                         type: 'GET',
                         data: {query: query},
                         dataType: 'json',
                         success: function (json) {
-                            // in this example, json is simply an array of strings
                             return processAsync(json);
                         }
                     });
                 }
             });
-
-            // $('.typeahead').typeahead({
-            //     source: function (query, process) {
-            //         return $.get('/exercises/type_ahead.php', { query: query }, function (data) {
-            //             return process(data.options);
-            //         });
-            //     }
-            // });
         }
     </script>
 </body>
