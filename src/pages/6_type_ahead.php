@@ -19,9 +19,19 @@
         >
     </div>
 </p>
+<?php
+echo getHelpResources(
+    [
+        [
+            'url' => 'https://www.elastic.co/guide/en/elasticsearch/reference/6.0/search-suggesters-completion.html#querying',
+            'title' => 'Elasticsearch docs: Suggesters Completion'
+        ]
+    ]
+);
+?>
 <p>
     Wow, if we would mix these exercises together, we could create that
-    Google feeling on our own websites!<br>
+    Google feeling on our own websites! Ain't that amazing!<br>
     <?php echo getNextExercisePageHref(__FILE__); ?>
 </p>
 
