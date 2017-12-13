@@ -18,7 +18,28 @@ $esIndexConfig = [
     'body' => [
         'settings' => [
             'number_of_shards' => 1,
-            'number_of_replicas' => 0
+            'number_of_replicas' => 0,
+            "index" => [
+                "analysis" => [
+                    "filter" => [
+                        "my_synonyms_filter" => [
+                            "type" => "synonym_graph",
+                            "synonyms" => [
+                                'apple, microsoft'
+                            ]
+                        ]
+                    ],
+                    "analyzer" => [
+                        "my_synonyms" => [
+                            "tokenizer" => "standard",
+                            "filter" => [
+                                "lowercase",
+                                "my_synonyms_filter"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ],
         'mappings' => [
             'workshop' => [
@@ -34,6 +55,10 @@ $esIndexConfig = [
                     ],
                     'name_suggest' => [
                         'type' => 'completion'
+                    ],
+                    'name_synonyms' => [
+                        'type' => 'text',
+                        "analyzer" => "my_synonyms"
                     ],
                     'family' => [
                         'type' => 'keyword'
@@ -88,6 +113,7 @@ function addDefaultDataToEsIndex() {
         $data['description'] = strip_tags($data['description']);
 
         $data['name_suggest'] = $data['name'];
+        $data['name_synonyms'] = $data['name'];
 
         try {
             $esClient->index(

@@ -14,6 +14,7 @@
 
     after that, you should be ready for your first exception.
 </p>
+
 <h2>Your first exercise</h2>
 <p>Each exercise contains of the following steps:</p>
 <ol>
@@ -26,3 +27,19 @@
     the index.
 </p>
 <p>You can find the exercises under the exercise button in the menu.</p>
+
+<h2>Elasticsearch lingo</h2>
+<p>
+    In these exercises we will use some lingo which comes with
+    working with Elasticsearch. Those words may be a bit confusing at
+    first, but if you know your databases, then no worries! We will
+    explain them for you!
+</p>
+<p>
+    <strong>Document</strong> is your record and contains the data
+    of it.<br>
+    <strong>Type</strong> is your table. Your resonate your documents
+    under a type.<br>
+    <strong>Index</strong> can be compared with your database. It
+    contains your types.
+</p>
