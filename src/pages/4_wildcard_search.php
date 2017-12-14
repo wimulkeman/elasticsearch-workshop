@@ -9,12 +9,12 @@
     index, when an email of that beloved customer drops into your
     mailbox. They love their new search engine, it works wonderful!
     It's truly amazing! Except for that one little thing, they can't
-    search SKU with them. You're fingers are already on the keyboard
+    search SKU with them. Your fingers are already on the keyboard
     to explain to them that you support typos, and that you can't raise
-    the correcting of those anny higher, when you see the catch.
+    the correcting of those any higher, when you see the catch.
 </p>
 <p>
-    THey don't have a typo in there SKU, but are just typing a part
+    They don't have a typo in there SKU, but are just typing a part
     of the SKU, and want all the articles returned where the SKU
     contains that typed part. How to fix that?
 </p>

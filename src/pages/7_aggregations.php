@@ -26,7 +26,7 @@
 </p>
 <p>
     Now try implementing a aggregation with a bucket on the values
-    of the field<strong>family</strong> using a terms aggregation.
+    of the field <strong>family</strong> using a terms aggregation.
 </p>
 <p>
     If you want to know more about the fields and the data available,
@@ -57,7 +57,7 @@ echo getHelpResources(
 
 <h3>7.2: Bonus - Adding another aggregation</h3>
 <p>
-    Try adding a aggregation for the field category.
+    Try adding a aggregation for the field categories.
 </p>
 <p>
     <?php
@@ -69,7 +69,7 @@ echo getHelpResources(
 </p>
 
 
-<h3>7.2: Bonus - Well, that ain't wright</h3>
+<h3>7.2: Bonus - Well, that ain't right</h3>
 <p>
     Until now everything seems okay. But see what happens when
     you add a aggregation on the field <strong>family_wrongly_mapped</strong>.

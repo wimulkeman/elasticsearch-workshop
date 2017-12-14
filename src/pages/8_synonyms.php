@@ -6,7 +6,7 @@
 <p>
     Sometimes you say something, but you mean something else.
     Because hey, we all mean Microsoft when we are talking about
-    Apple, wright? No? Well for the sake of this example we do.
+    Apple, right? No? Well for the sake of this example we do.
     Try searching for <strong>Apple</strong>.
 </p>
 <p>
@@ -19,7 +19,7 @@
 </p>
 <p>
     You see, you really meant <strong>Microsoft</strong> after all!
-    Wright! Wright? No? Alright then.
+    Right! Right? No? Alright then.
 </p>
 <p>
     For this we used something in the mapping of our fields called
