@@ -98,8 +98,8 @@ echo getHelpResources(
 
 <h3>1.4 Matching both words</h3>
 <p>
-    Try to match both words <strong>lexmark</strong> and <strong>printer</strong>. The results count should be lower than
-    before.
+    Try to match both words <strong>lexmark</strong> and <strong>printer</strong>.
+    The results count should ne lower then at 1.3.
 </p>
 <p>
     <?php
@@ -123,7 +123,7 @@ echo getHelpResources(
 <h3>1.5 Matching only one of the words</h3>
 <p>
     Now try to match only one of words <strong>lexmark</strong> or <strong>webcam</strong>.
-    The results count should be lower than before.
+    The results count should ne lower then at 1.3.
 </p>
 <p>
     <?php
