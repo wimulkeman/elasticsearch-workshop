@@ -15,6 +15,24 @@
     after that, you should be ready for your first exercise.
 </p>
 
+<k2>Kibana</k2>
+<p>
+    First click on the <strong>Reset index</strong> button
+    in the menu.
+</p>
+<p>
+    When you open <a href="http://localhost:5601">Kibana</a>
+    you will be confronted with a question. What index would
+    you like to see?
+</p>
+<p>
+    Replace the text in the field with <strong>webstores</strong>
+    (the name of the index), and click on <strong>Create</strong>.
+    You should now see the mapping of your index. Afterwards you
+    can click on Discover on the top in the menu on the left.
+    There you can see the loaded dataaset.
+</p>
+
 <h2>Your first exercise</h2>
 <p>Each exercise contains of the following steps:</p>
 <ol>
