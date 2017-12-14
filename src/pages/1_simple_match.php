@@ -190,7 +190,7 @@ echo getHelpResources(
 <div class="alert alert-warning" role="alert">
     Due to an converting problem with the Elasticsearch PHP client, you can't just define
     a empty param, it will throw an error! But there is a solution! Use <strong>(object) []</strong>
-    on the place of your empty param, and no one will now about it.
+    on the place of your empty param, and no one will know about it.
 </div>
 <p>
     <?php
