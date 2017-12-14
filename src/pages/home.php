@@ -12,7 +12,7 @@
 
     <pre><code class="bash">composer install</code></pre>
 
-    after that, you should be ready for your first exception.
+    after that, you should be ready for your first exercise.
 </p>
 
 <h2>Your first exercise</h2>
