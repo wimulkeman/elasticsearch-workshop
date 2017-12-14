@@ -102,7 +102,7 @@ function getHelpResources(array $resources): string
     $resourceHtml = <<<html
         <h3>Help...</h3>
         <p>
-            Stuck? Try these resources:
+            Are you stuck? Try these resources:
             <ul>
                 {$links}
             </ul>
