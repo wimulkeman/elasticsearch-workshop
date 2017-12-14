@@ -46,6 +46,16 @@ echo getHelpResources(
 );
 ?>
 
+<h3>Wow, what happened</h3>
+<p>
+    Synonyms can be a powerful concept, but how does it work? Synonyms
+    are a analyser that is set on a field. Because it is a analyzer, the
+    synonyms are defined when you create the mapping for your index.
+</p>
+<p>
+    Mappings are done before you populate your index with documents.
+</p>
+
 <p>
     <?php echo getNextExercisePageHref(__FILE__); ?>
 </p>
