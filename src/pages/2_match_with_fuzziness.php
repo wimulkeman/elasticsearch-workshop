@@ -2,7 +2,7 @@
 
 <?php echo displayExerciseLocationNotice(__FILE__); ?>
 
-<h3>1.0: It's those customers, I tell you man, those customers</h3>
+<h3>2.0: It's those customers, I tell you man, those customers</h3>
 <p>
     Customers, we love them for they generate the page views on our
     sites, but we also sometimes hate them. Why? Because they will
@@ -19,7 +19,7 @@
     called <strong>fuzziness</strong>. The
 </p>
 
-<h3>1.1: Just one character at the time</h3>
+<h3>2.1: Just one character at the time</h3>
 <p>
     Let's start simple. Start with writing a query with a fuzziness
     of <strong>1</strong>. No need to worry about the match query
@@ -37,7 +37,7 @@ echo getQueryForm($modalId, getExerciseFilename(__FILE__));
 echo getResultModal($modalId);
 ?>
 <p>
-    But what happens when you enter <strong>elmrak</strong>?
+    But what happens when you enter <strong>elxmrak</strong>?
     Oh no! There goes those wonderful results! In the next exercise
     we will look at the options for supporting customers who may have
     some typing problems.
@@ -57,7 +57,7 @@ echo getHelpResources(
 );
 ?>
 
-<h3>1.2: Fixing multiple typos</h3>
+<h3>2.2: Fixing multiple typos</h3>
 <p>
     Alright, so we can fix one typo, but for those customers that
     want even more convenience? Can we provide that? Yes we can!
@@ -67,7 +67,7 @@ echo getHelpResources(
     may change to find a matching word. A fuzziness of <strong>1</strong>
     allowed us to fix 1 typo. So upping it a little should allow for a
     even better fix! Try raising the fuzziness to <strong>3</strong>
-    and see what happens when you search <strong>elmrak</strong> now.
+    and see what happens when you search <strong>elxmrak</strong> now.
 </p>
 <?php
 $modalId = 'threeCharacterFuzziness';
@@ -76,7 +76,7 @@ echo getQueryForm($modalId, getExerciseFilename(__FILE__));
 echo getResultModal($modalId);
 ?>
 
-<h3>1.3: Maybe one step to far</h3>
+<h3>2.3: Maybe one step to far</h3>
 <p>
     Oh boy, it works, what a delight! So raising the fuzziness to
     the stars and beyond solves everything now does it not. Well,
@@ -100,7 +100,7 @@ echo getResultModal($modalId);
     characters in the term! Isn't their a midway in this madness?
 </p>
 
-<h3>1.4: Back to the drawing board</h3>
+<h3>2.4: Back to the drawing board</h3>
 <p>
     There is. Elasticsearch provides a setting for fuzziness
     called <strong>auto</strong>. It makes the fuzziness value
