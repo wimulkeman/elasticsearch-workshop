@@ -110,7 +110,7 @@ echo getResultModal($modalId);
 </p>
 <p>
     Implement the auto value for your fuzziness search, and retry those
-    term <strong>foo</strong>, <strong>lxemark</strong> and <strong>elsmrak</strong>.
+    term <strong>foo</strong>, <strong>lxemark</strong> and <strong>elxmrak</strong>.
 </p>
 <?php
 $modalId = 'autoFuzziness';
