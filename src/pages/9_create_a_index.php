@@ -26,7 +26,7 @@
 <h3>9.1: Hello index world!</h3>
 <p>
     For this exercise, we start simple. Open the console from
-    <a target="_blank" href="http://localhost:5601/app/kibana#/dev_tools/console?load_from=http://localhost/resources/json/create_a_index.json">Kibana</a>
+    <?php echo loadJsonFileInKibana('create_a_index.json'); ?>
     and try to create a index named hello_world.
 </p>
 
@@ -42,8 +42,43 @@ echo getHelpResources(
 ?>
 
 <p>
-    If all went well, you should receive a acknowledge message after pushing that enormous green arrow
+    If all went well, you should receive an acknowledgement message after pushing that enormous green arrow
     in the console window in Kibana.
+</p>
+<p>
+    But how did you create the index? Have you created it using 1 shard, or multiple? And how many replicas
+    did you make it use? And what are those things? You can read more about it in the documentation of
+    <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html#getting-started-shards-and-replicas">Elasticsearch</a>.
+</p>
+<p>
+    Another way to check if your index is created is by using the tremendous powerful
+    interface that Kibana offers us. Ain't that sweet of that little program.
+</p>
+<p>
+    Follow the following steps to see all the interfaces known in Elasticsearch:<br>
+    <ol>
+        <li>Open <?php echo loadKibana(); ?></li>
+        <li>Open the management tab in the menu</li>
+        <li>Click under Elasticsearch on "Index Management"</li>
+        <li>See if your index name is listed</li>
+    </ol>
+</p>
+<p>
+    Normally we would want to look into the index also using the discovery tab in the menu. To do that
+    we can follow the following steps:<br>
+    <ol>
+        <li>Open <?php echo loadKibana(); ?></li>
+        <li>Open the management tab in the menu</li>
+        <li>Click under Kibana on "Index Patterns"</li>
+        <li>Click on Create Index</li>
+        <li>Enter the name of your index, or select it in the list as shown under the index pattern field</li>
+    </ol>
+    And done... wait what? It doesn't appear? What happened? It is there, but not there?
+</p>
+<p>
+    Aldo we created an index, it is completely empty, and a storage without shelves isn't exactly a storage
+    now is it? It is time to create those shelves and bring a system into it using something called
+    <strong>mapping</strong>.
 </p>
 
 <p>
