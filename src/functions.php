@@ -138,8 +138,18 @@ function getKibanaUrl() {
     return 'http://localhost:5601';
 }
 
+function loadKibanaDevToolsUrl()
+{
+    return getKibanaUrl().'/app/kibana#/dev_tools/console';
+}
+
 function loadKibana(string $linkText = 'Kibana') {
     return '<a href="'.getKibanaUrl().'">'.$linkText.'</a>';
+}
+
+function loadKibanaDevTools(string $linkText = 'Kibana Dev Tools')
+{
+    return '<a href="'.loadKibanaDevToolsUrl().'">'.$linkText.'</a>';
 }
 
 function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
@@ -147,5 +157,5 @@ function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
         throw new \UnexpectedValueException($jsonFile);
     }
 
-    return '<a href="'.getKibanaUrl().'/app/kibana#/dev_tools/console?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
+    return '<a href="'.loadKibanaDevToolsUrl().'?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
 }
