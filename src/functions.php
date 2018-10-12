@@ -133,3 +133,19 @@ function getNextExercisePageHref(string $currentExercisePage): string
 
     return "Its time for the <a href='{$href}'>next exercise</a>, or to take a break.";
 }
+
+function getKibanaUrl() {
+    return 'http://localhost:5601';
+}
+
+function loadKibana(string $linkText = 'Kibana') {
+    return '<a href="'.getKibanaUrl().'">'.$linkText.'</a>';
+}
+
+function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
+    if (empty($jsonFile)) {
+        throw new \UnexpectedValueException($jsonFile);
+    }
+
+    return '<a href="'.getKibanaUrl().'/app/kibana#/dev_tools/console?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
+}
