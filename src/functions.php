@@ -144,12 +144,12 @@ function loadKibanaDevToolsUrl()
 }
 
 function loadKibana(string $linkText = 'Kibana') {
-    return '<a href="'.getKibanaUrl().'">'.$linkText.'</a>';
+    return '<a target="_blank" href="'.getKibanaUrl().'">'.$linkText.'</a>';
 }
 
-function loadKibanaDevTools(string $linkText = 'Kibana Dev Tools')
+function loadKibanaDevTools(string $linkText = 'Kibana > Dev Tools')
 {
-    return '<a href="'.loadKibanaDevToolsUrl().'">'.$linkText.'</a>';
+    return loadJsonFileInKibana('blank_console_input.json', $linkText);
 }
 
 function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
@@ -157,5 +157,5 @@ function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
         throw new \UnexpectedValueException($jsonFile);
     }
 
-    return '<a href="'.loadKibanaDevToolsUrl().'?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
+    return '<a target="_blank" href="'.loadKibanaDevToolsUrl().'?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
 }

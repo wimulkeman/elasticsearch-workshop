@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/layout.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/highlight/default.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/highlight/darcula.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

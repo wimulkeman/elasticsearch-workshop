@@ -1,0 +1,10 @@
+PUT hello_world
+{
+  "mappings": {
+    "doc": {
+      "properties": {
+
+      }
+    }
+  }
+}
