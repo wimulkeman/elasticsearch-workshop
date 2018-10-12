@@ -22,6 +22,8 @@ foreach ($pages as $page) {
     if (!in_array($exercisePage, $exercises)) {
         $exercisePages[$page]['disabled'] = true;
     }
+
+    ksort($exercisePages, SORT_NATURAL);
 }
 
 $pageRequest = pathinfo(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
