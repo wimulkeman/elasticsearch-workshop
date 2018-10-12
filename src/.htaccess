@@ -5,3 +5,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 </IfModule>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://localhost:5601"
+</IfModule>

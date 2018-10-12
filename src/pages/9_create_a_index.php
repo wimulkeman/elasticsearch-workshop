@@ -1,6 +1,6 @@
 <h2>9: Create a index</h2>
 
-<?php echo displayExerciseLocationNotice(__FILE__); ?>
+<?php //echo displayExerciseLocationNotice(__FILE__); ?>
 
 <p>
     Wait what? Where we not just a few moments ago messing with those awesome
@@ -11,7 +11,7 @@
     In the last exercise we created synonyms, which influence the mapping of
     fields and there values when you create a index. So now that you now how
     to use those marvelous contraptions, and know how to retrieve you're data
-    from that big box called a <strong>index</strong>, lets see what an index is.
+    from that big box called a <strong>index</strong>, let us see what an index is.
 </p>
 <p>
     In this lesson we embark ourselves on a complete new journey. A journey
@@ -40,6 +40,11 @@ echo getHelpResources(
     ]
 );
 ?>
+
+<p>
+    If all went well, you should receive a acknowledge message after pushing that enormous green arrow
+    in the console window in Kibana.
+</p>
 
 <p>
     <?php echo getNextExercisePageHref(__FILE__); ?>
