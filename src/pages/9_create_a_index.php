@@ -1,7 +1,5 @@
 <h2>9: Create a index</h2>
 
-<?php //echo displayExerciseLocationNotice(__FILE__); ?>
-
 <p>
     Wait what? Where we not just a few moments ago messing with those awesome
     queries on the index, and now you're reading about mappings and indexes.
