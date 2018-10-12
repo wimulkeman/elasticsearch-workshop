@@ -43,11 +43,13 @@ echo getHelpResources(
     If all went well, you should receive an acknowledgement message after pushing that enormous green arrow
     in the console window in Kibana.
 </p>
+<h4>9.1.1: Unleash the nerd within you!</h4>
 <p>
     But how did you create the index? Have you created it using 1 shard, or multiple? And how many replicas
     did you make it use? And what are those things? You can read more about it in the documentation of
     <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html#getting-started-shards-and-replicas">Elasticsearch</a>.
 </p>
+<h3>9.2: Find your index stats</h3>
 <p>
     Another way to check if your index is created is by using the tremendous powerful
     interface that Kibana offers us. Ain't that sweet of that little program.
@@ -61,6 +63,7 @@ echo getHelpResources(
         <li>See if your index name is listed</li>
     </ol>
 </p>
+<h4>9.2.1: Whats in the index</h4>
 <p>
     Normally we would want to look into the index also using the discovery tab in the menu. To do that
     we can follow the following steps:<br>

@@ -15,6 +15,7 @@
     Your index will be good, it will be great. It will be your index first!
     We will add a mapping to it!
 </p>
+<h3>10.1: Adding fields to the index</h3>
 <p>
     We are starting simple. Add the fields <strong>firstname</strong> and <strong>lastname</strong> fields to your <strong>hello_world</strong>
     index, and make them of the type text. Try adding them using <?php echo loadJsonFileInKibana('blank_mapping_syntax.json'); ?>.
@@ -39,6 +40,7 @@ echo getHelpResources(
     to prevent changing an existing mapping to ensure existing documents within that index
     become corrupted. Those clever folks at Elastic.
 </p>
+<h3>10.2: Deleting an index</h3>
 <p>
     But what to do for now? You need that new mapping to apply to your index to make it
     work for this exercise... We're going to do something you should <strong>never</strong>
@@ -59,6 +61,7 @@ echo getHelpResources(
     ]
 );
 ?>
+<h3>10.3: Rerun that script <i class="material-icons">repeat</i></h3>
 <p>
     Now we cleared that inconvenience, try recreating the index using your new mapping.
     Hopefully you still have that one opened in one of your tabs.
