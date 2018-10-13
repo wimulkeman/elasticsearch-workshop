@@ -72,7 +72,7 @@ echo getHelpResources(
         <li>Open the management tab in the menu</li>
         <li>Click under Kibana on "Index Patterns"</li>
         <li>Click on Create Index</li>
-        <li>Enter the name of your index, or select it in the list as shown under the index pattern field</li>
+        <li>Enter the name of your index, it should be visible in the list under the textbox</li>
     </ol>
     And done... wait what? It doesn't appear? What happened? It is there, but not there?
 </p>
