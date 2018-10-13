@@ -53,6 +53,21 @@ echo getHelpResources(
     data in your production environment. That could change in the future as the retrieval through
     SQL is fast, but less fault proof then the DSL language.
 </p>
+
+<h3>14.3: Get your shot of DSL through SQL</h3>
+<p>
+    One of the neat features of SQL is the ability to generate the equivalent DSL syntax for
+    you. Try that by running the previous SQL query to select all the records,
+    but now add <strong>POST _xpack/sql/translate</strong> as the first line and the usage of
+    WHERE in your query.
+</p>
+<p>
+    This translation part can come in handy when you need to write a more complex
+    query using DSL, as the DSL structure is still used by most of the packages
+    between the applications and the Elasticsearch indexes. The SQL translate function
+    will try to create the best performing DSL syntax for your request.
+</p>
+
 <p>
     If you want to read more about the usage of SQL within Elasticsearch, you can read there
     <a href="https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1" target="_blank">blog posts</a>
