@@ -25,7 +25,7 @@ echo getHelpResources(
     [
         [
             'url' => 'https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html#_example_mapping',
-            'title' => 'Elasticsearch docs: Example mapping'
+            'title' => 'Elasticsearch docs: Example Mapping'
         ]
     ]
 );
