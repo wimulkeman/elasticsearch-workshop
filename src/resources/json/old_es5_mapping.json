@@ -1,0 +1,28 @@
+PUT twitter
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "rebuilt_keyword": {
+          "tokenizer": "keyword"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "user": {
+      "properties": {
+        "name": { "type": "string" },
+        "user_name": { "type": "string", "analyzer": "rebuilt_keyword" },
+        "email": { "type": "string" }
+      }
+    },
+    "tweet": {
+      "properties": {
+        "content": { "type": "string" },
+        "user_name": { "type": "string", "analyzer": "rebuilt_keyword" },
+        "tweeted_at": { "type": "date" }
+      }
+    }
+  }
+}
