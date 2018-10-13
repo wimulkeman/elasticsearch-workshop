@@ -126,10 +126,10 @@ function getNextExercisePageHref(string $currentExercisePage): string
     $nextPage = str_replace('pages', '', $nextExercisePage[0]);
     $href = $nextPage;
 
-    $exercisePage = getExerciseFilename($nextExercisePage[0]);
-    if (!is_file("exercises/{$exercisePage}")) {
-        return '';
-    }
+//    $exercisePage = getExerciseFilename($nextExercisePage[0]);
+//    if (!is_file("exercises/{$exercisePage}")) {
+//        return '';
+//    }
 
     return "Its time for the <a href='{$href}'>next exercise</a>, or to take a break.";
 }
