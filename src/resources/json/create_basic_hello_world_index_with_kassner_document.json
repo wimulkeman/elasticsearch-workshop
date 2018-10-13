@@ -1,0 +1,23 @@
+DELETE hello_world
+
+PUT hello_world
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "firstname": {"type": "text"},
+        "lastname": {"type": "text"}
+      }
+    }
+  }
+}
+
+POST hello_world/_doc
+{
+  "firstname": "Björn",
+  "lastname": "Kaßnner"
+}
