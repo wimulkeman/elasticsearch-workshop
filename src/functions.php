@@ -157,6 +157,11 @@ function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
         throw new \UnexpectedValueException($jsonFile);
     }
 
+    $resourceDir = __DIR__ . '/resources/json/';
+    if (!\is_file($resourceDir.$jsonFile)) {
+        throw new \InvalidArgumentException("The resources file is mssing: {$resourceDir}{$jsonFile}");
+    }
+
     return '<a target="_blank" href="'.getKibanaDevToolsUrl().'?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
 }
 
