@@ -1,0 +1,6 @@
+PUT /hello_world/_mapping/_doc
+{
+  "properties": {
+
+  }
+}
