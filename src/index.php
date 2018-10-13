@@ -19,9 +19,9 @@ foreach ($pages as $page) {
         'title' => str_replace('_', ' ', ucfirst($title)),
     ];
 
-    if (!in_array($exercisePage, $exercises)) {
-        $exercisePages[$page]['disabled'] = true;
-    }
+//    if (!in_array($exercisePage, $exercises)) {
+//        $exercisePages[$page]['disabled'] = true;
+//    }
 
     ksort($exercisePages, SORT_NATURAL);
 }
