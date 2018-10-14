@@ -1,8 +1,8 @@
 <h2>10: Using mapping</h2>
 
 <p>
-    Oh boy, we have just created our own very first index! Or maybe you're second
-    or third, or you lost count because you're have done your share of Elasticsearch
+    Oh boy, we have just created our own very first index! Or maybe your second
+    or third, or you lost count because you've done your share of Elasticsearch
     stuff.
 </p>
 <p>
@@ -17,8 +17,9 @@
 </p>
 <h3>10.1: Adding fields to the index</h3>
 <p>
-    We are starting simple. Add the fields <strong>firstname</strong> and <strong>lastname</strong> fields to your <strong>hello_world</strong>
-    index, and make them of the type text. Try adding them using <?php echo loadJsonFileInKibana('blank_mapping_syntax.json'); ?>.
+    We are starting simple. Add the fields <strong>firstname</strong> and <strong>lastname</strong>
+    fields to your <strong>hello_world</strong> index, and make them of the type text. Try adding
+    them using <?php echo loadJsonFileInKibana('blank_mapping_syntax.json'); ?>.
 </p>
 <?php
 echo getHelpResources(
@@ -37,14 +38,14 @@ echo getHelpResources(
 <p>
     In the previous exercise we already created the index <strong>hello_world</strong>,
     and Elasticsearch has a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html#_updating_existing_field_mappings">policy in place</a>
-    to prevent changing an existing mapping to ensure existing documents within that index
+    to prevent changing an existing mapping to ensure existing documents within that index don't
     become corrupted. Those clever folks at Elastic.
 </p>
 <h3>10.2: Deleting an index</h3>
 <p>
     But what to do for now? You need that new mapping to apply to your index to make it
     work for this exercise... We're going to do something you should <strong>never</strong>
-    do on a production environment, or at least not when it can be traced back at you ;).
+    do in a production environment, or at least not when it can be traced back at you ;).
     We are going to delete the existing index.
 </p>
 <p>

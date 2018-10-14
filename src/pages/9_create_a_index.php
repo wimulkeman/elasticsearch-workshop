@@ -1,19 +1,19 @@
 <h2>9: Create a index</h2>
 
 <p>
-    Wait what? Where we not just a few moments ago messing with those awesome
+    Wait what? Were we not just a few moments ago messing with those awesome
     queries on the index, and now you're reading about mappings and indexes.
     What happened?
 </p>
 <p>
     In the last exercise we created synonyms, which influence the mapping of
-    fields and there values when you create a index. So now that you now how
-    to use those marvelous contraptions, and know how to retrieve you're data
+    fields and their values when you create a index. So now that you know how
+    to use those marvelous contraptions, and know how to retrieve your data
     from that big box called a <strong>index</strong>, let us see what an index is.
 </p>
 <p>
     In this lesson we embark ourselves on a complete new journey. A journey
-    which predates the work happy query era from our previous exercises, if we
+    which predates the work happy query era from our previous exercises, as if we
     had a time machine.
 </p>
 <p>
@@ -40,13 +40,14 @@ echo getHelpResources(
 ?>
 
 <p>
-    If all went well, you should receive an acknowledgement message after pushing that enormous green arrow
-    in the console window in Kibana.
+    If all went well, you should receive an acknowledgement message after pushing
+    that enormous green arrow in the console window in Kibana.
 </p>
 <h4>9.1.1: Unleash the nerd within you!</h4>
 <p>
-    But how did you create the index? Have you created it using 1 shard, or multiple? And how many replicas
-    did you make it use? And what are those things? You can read more about it in the documentation of
+    But how did you create the index? Have you created it using 1 shard, or multiple?
+    And how many replicas did you make it use? And what are those things? You can read
+    more about it in the documentation of
     <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html#getting-started-shards-and-replicas">Elasticsearch</a>.
 </p>
 <h3>9.2: Find your index stats</h3>
@@ -63,7 +64,7 @@ echo getHelpResources(
         <li>See if your index name is listed</li>
     </ol>
 </p>
-<h4>9.2.1: Whats in the index</h4>
+<h4>9.2.1: What's in the index</h4>
 <p>
     Normally we would want to look into the index also using the discovery tab in the menu. To do that
     we can follow the following steps:<br>
@@ -77,9 +78,9 @@ echo getHelpResources(
     And done... wait what? It doesn't appear? What happened? It is there, but not there?
 </p>
 <p>
-    Aldo we created an index, it is completely empty, and a storage without shelves isn't exactly a storage
-    now is it? It is time to create those shelves and bring a system into it using something called
-    <strong>mapping</strong>.
+    Although we created an index, it is completely empty, and a storage without shelves isn't exactly
+    a storage now is it? It is time to create those shelves and bring a system into it using something
+    called <strong>mapping</strong>.
 </p>
 
 <p>

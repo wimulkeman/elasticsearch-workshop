@@ -1,6 +1,6 @@
 <h2>11: Enriching the index</h2>
 <p>
-    Now we have a index with two fields. Lets try and see if we can discover what
+    Now we have an index with two fields. Let's try and see if we can discover what
     is inside of it using <?php echo loadKibana(); ?>. To be able to see an index and
     its fields, from the discovery mode in Kibana, it needs to have some data within it.
 </p>
@@ -8,7 +8,7 @@
 <h3>11.1: Adding your first document</h3>
 <p>
     We need a name to add as a document in our index, but what should it be?
-    When your stuck on doubt, John Doe will get you out! Ad a document to the index
+    When you're stuck on doubt, John Doe will get you out! Add a document to the index
     with as firstname <strong>John</strong>, and as lastname <strong>Doe</strong>.
 </p>
 <?php
@@ -24,9 +24,9 @@ echo getHelpResources(
 
 <h3>11.2: Discover your new created index</h3>
 <p>
-    Now that we have an index and something in it, its time to follow John Doe and discover
-    this new frontier. To enable Kibana to analyse your index, we need to add it first. You can do that
-    by following these steps:
+    Now that we have an index and something in it, it's time to follow John Doe and discover
+    this new frontier. To enable Kibana to analyse your index, we need to add it first. You can do
+    that by following these steps:
     <ol>
         <li>Open <?php echo loadKibana(); ?></li>
         <li>Open the management tab in the menu</li>
@@ -42,7 +42,7 @@ echo getHelpResources(
 <p>
     We now have our start of unraveling the mystery surrounding John Doe,
     but we need more information to make it useful for any system we can connect
-    to our index. Its time to enrich our data.
+    to our index. It's time to enrich our data.
 </p>
 <p>
     Try to add the following fields <strong>birthday</strong> (date field) and
@@ -81,10 +81,10 @@ echo getHelpResources(
 </p>
 <p>
     In your research on unraveling the mystery of John Doe your endeavour took you into
-    some of the deepest archives known to modern men. You needed a stair to get to them!
-    Inside one of them you found something known as paper, and on the record of the day
-    a certain Doe, J was born. That must be John! You better update his record in your index
-    for who knows when you may need that information.
+    some of the deepest archives known to modern men. You needed stairs to get to them!
+    Inside one of the archives you found something known as paper, and amongst it a record of
+    the day that a certain Doe, J was born. That must be John! You better update his record in
+    your index for who knows when you may need that information.
 </p>
 <p>
     Try updating your record with the birthday you saw in the paper record, August 20, 1970
@@ -106,8 +106,9 @@ echo getHelpResources(
     field, then you should check if you provided the correct id to update the document.
 </p>
 <p>
-    And while where at it, try updating the <strong>times_viewed</strong> field by adding as
-    input value <strong>2 times today</strong> in <?php echo loadKibanaDevTools(); ?>. See what happens.
+    And while we're at it, try updating the <strong>times_viewed</strong> field by adding as
+    input value <strong>2 times today</strong> in <?php echo loadKibanaDevTools(); ?>.
+    See what happens.
 </p>
 <p>
     Elasticsearch has some default validation rules for the different types of
@@ -122,7 +123,7 @@ echo getHelpResources(
 <h3>11.5: Refactor your index</h3>
 <p>
     We've updated our index a couple of times now, and every time you needed to recreate
-    the index from scratch. Aldo that seems like a smart move to pressure you into
+    the index from scratch. Although that seems like a smart move to pressure you into
     mapping out your data structure before implementing anything at first, sometimes
     the world around you changes.
 </p>
@@ -137,7 +138,7 @@ echo getHelpResources(
     to use the same field for our old programs and new programs.
 </p>
 <p>
-    Try creating a alias field <strong>surname</strong> which links to the field
+    Try creating an alias field <strong>surname</strong> which links to the field
     <strong>lastname</strong> in <?php echo loadJsonFileInKibana('update_hello_world_index.json'); ?>.
 </p>
 <?php
@@ -165,7 +166,7 @@ echo getHelpResources(
 
 <h3>11.6: To fast?</h3>
 <p>
-    Did you go through these exercises way to easily? Then well done! But if you're doing
+    Did you go through these exercises way too easily? Then well done! But if you're doing
     this with other colleagues, you may want to wait for them to catch up. What you can
     do in the meantime? Try some of those other datatypes and test what kind of validation
     Elasticsearch has on them. A nice one for example is the <strong>ip</strong> address

@@ -1,18 +1,18 @@
 <h2>12: Updating old indexes</h2>
 <p>
-    Up to this far we used the cutting edge of the index power
+    Up to this point we used the cutting edge of the index power
     available in Elasticsearch, but you're engaging monstrous indexes from the old
     days on a daily basis, and they don't like change!
 </p>
 
 <h3>12.1: Transforming a index from 5.* to 6.*</h3>
 <p>
-    When Elasticsearch updated its internal workings from 5 to 6, it changes
-    quiet a bit under its hood. And you would feel that immediately when you
-    wanted to use your old mapping on your brand new Elasticsearch 6 index.
+    When Elasticsearch updated its internal workings from version 5 to 6, it changed
+    quite a bit under its hood. And you would feel that immediately when you
+    try to use your old mapping on your brand new Elasticsearch 6 index.
 </p>
 <p>
-    During this exercise where going to refurbish that old school mapping
+    During this exercise we're going to refurbish that old school mapping
     into something roadworthy for this new era.
 </p>
 <p>
@@ -35,7 +35,8 @@ echo getHelpResources(
 );
 ?>
 <p>
-    Did you also took a good look at the analyser used? Could that one also be done a bit simpler?
+    Did you also take a good look at the analyser used? Could that one also be
+    done a bit simpler?
 </p>
 <?php
 echo getHelpResources(

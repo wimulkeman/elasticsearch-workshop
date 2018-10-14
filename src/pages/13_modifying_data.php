@@ -1,14 +1,14 @@
 <h2>13: Modifying data</h2>
 <p>
-    Elasticsearch has some mechanism available to modify the way it looks
-    and indexes certain data. Those mechanisms are called analysers and
-    normalysers.
+    Elasticsearch has some mechanisms available to modify the way it looks
+    and to index certain data. Those mechanisms are called analysers and
+    normalizers.
 </p>
 
 <h3>13.1: Analyse this or Analyse that</h3>
 <p>
-    Maybe Elasticsearch isn't a psychiatrist, but from time to time
-    our data needs to be analysed. You don't require to be a mobster for that!
+    Maybe Elasticsearch isn't a shrink, but from time to time
+    our data needs to be analysed. You aren't required to be a mobster for that!
 </p>
 <p>
     An analyser within Elasticsearch can help you for example to not index
@@ -39,8 +39,8 @@ echo getHelpResources(
 
 <h3>13.2: Going crazy with analysers</h3>
 <p>
-    When comfortable with the default analysers, you can try to build your own. Make a
-    analysers which treats each word divided by a space as a new term, and transforms
+    When comfortable with the default analysers, you can try to build your own. Make an
+    analyser which treats each word divided by a space as a new term, and transforms
     all words to lowercase. Use <?php echo loadKibanaDevTools(); ?> for this.
 </p>
 <?php
@@ -65,16 +65,17 @@ echo getHelpResources(
 <h3>13.3: Just be normal, that's already strange enough</h3>
 <p>
     Normalizers within Elasticsearch can be used to convert data inserted into the
-    index to a default format. That can used to ease the search when documents would
-    contain unexpected characters.
+    index to a default format. That can be used to simplify the search for documents which
+    contain special characters.
 </p>
 <p>
     Try adding a normalizer to change special characters to lowercase default ascii values
     using <?php echo loadJsonFileInKibana('create_basic_hello_world_index_with_kassner_document.json'); ?>.
 </p>
 <p>
-    After adding the normalyzer to your index ad as a document a person with firstname: Björn, lastname: Kaßnner,
-    and try to search for it using as searchterms firstname: bjorn, lastname: kassner.
+    After adding the normalizer to your index ad as a document a person with
+    firstname: Björn, lastname: Kaßnner, and try to search for it using as
+    search terms firstname: bjorn, lastname: kassner.
 </p>
 <?php
 echo getHelpResources(
