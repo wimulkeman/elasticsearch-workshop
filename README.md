@@ -21,7 +21,7 @@ on your [localhost](http://localhost).
 
 Elasticsearch is available on [localhost:9200](http://localhost:9200).
 
-Kibana is available on [localhost:5601](http://localhost:9200).
+Kibana is available on [localhost:5601](http://localhost:5601).
 
 You may need to replace localhost with your own domain if your Docker
 configuration runs on another location.
