@@ -134,7 +134,7 @@ echo getHelpResources(
 </p>
 <p>
     Or maybe not? Elasticsearch has an option called alias fields. Those enable us to
-    create a new virtual field which underneath maps to another field. THat enables us
+    create a new virtual field which underneath maps to another field. That enables us
     to use the same field for our old programs and new programs.
 </p>
 <p>
