@@ -3,3 +3,5 @@ data/elasticsearch/
 
 data/composer/
 !data/composer/.gitkeep
+
+.env

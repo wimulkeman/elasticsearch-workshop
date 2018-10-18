@@ -25,7 +25,7 @@
     in the way a search term is analyzed by the tokenizer.
 </p>
 <p>
-    <a href="http://localhost:5601/app/kibana#/dev_tools/console?load_from=https://www.elastic.co/guide/en/elasticsearch/reference/6.0/snippets/_explain_analyze/1.json" target="_blank">
+    <a href="<?php echo getenv('KIBANA_URL'); ?>/app/kibana#/dev_tools/console?load_from=https://www.elastic.co/guide/en/elasticsearch/reference/6.0/snippets/_explain_analyze/1.json" target="_blank">
         Start the console
     </a>
 </p>

@@ -30,7 +30,7 @@
 </p>
 <p>
     If you want to know more about the fields and the data available,
-    check <a href="http://localhost:5601" target="_blank">Kibana</a>.
+    check <?php echo loadKibana(); ?>.
 </p>
 <p>
     <?php

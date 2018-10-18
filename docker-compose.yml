@@ -11,6 +11,8 @@ services:
       - ./stack/apache2/conf:/usr/local/apache2/conf:ro,cached
     depends_on:
       - php71
+    env_file:
+      - .env
   php71:
     image: webstores/php71:1.11.0
     container_name: php71
@@ -19,6 +21,8 @@ services:
     volumes:
       - ./src:/var/www/html:rw,cached
       - ./data/composer:/home/php/.composer
+    env_file:
+    - .env
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.4.1
     container_name: elasticsearch

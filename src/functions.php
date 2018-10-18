@@ -135,7 +135,7 @@ function getNextExercisePageHref(string $currentExercisePage): string
 }
 
 function getKibanaUrl() {
-    return 'http://localhost:5601';
+    return getenv('KIBANA_URL');
 }
 
 function getKibanaDevToolsUrl()
@@ -162,7 +162,7 @@ function loadJsonFileInKibana(string $jsonFile, string $linkText = 'Kibana') {
         throw new \InvalidArgumentException("The resources file is mssing: {$resourceDir}{$jsonFile}");
     }
 
-    return '<a target="_blank" href="'.getKibanaDevToolsUrl().'?load_from=http://localhost/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
+    return '<a target="_blank" href="'.getKibanaDevToolsUrl().'?load_from='.getenv('WEBPAGE_URL').'/resources/json/'.$jsonFile.'">'.$linkText.'</a>';
 }
 
 function loadKibanaDiscover(string $linkText = 'Kibana > Discover') {

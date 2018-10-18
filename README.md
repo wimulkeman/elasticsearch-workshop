@@ -8,9 +8,28 @@ This workshop uses:
 - Kibana 6
 - Docker
 
+On your system we will be default use the following ports:
+- 80
+- 9200
+- 5601
+
+These ports can be changed as explained up ahead in this
+README.
+
+## Env file
+
+Copy the .env.dist file in the root of the project to .env
+
+We are all equal, but some more than others.
+
+For those who have already use the ports we use within
+this workshop, you can change the ports in your composer
+and in the .env file.
+
 ## Docker
 
-Start the workshop by running the command in the root of this project.
+After copying the .env file, run the following command in the
+root of this project.
 
 ```bash
 docker-compose up

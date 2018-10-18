@@ -27,7 +27,7 @@
                     <a class="nav-link" href="/reset_index.php">Reset index</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="http://localhost:5601">Show dataset (Kibana)</a>
+                    <a class="nav-link" target="_blank" href="<?php echo getenv('KIBANA_URL'); ?>">Show dataset (Kibana)</a>
                 </li>
 
                 <li class="nav-item dropdown">

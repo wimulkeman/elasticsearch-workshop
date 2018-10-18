@@ -21,7 +21,7 @@
     in the menu.
 </p>
 <p>
-    When you open <a href="http://localhost:5601">Kibana</a>
+    When you open <?php echo loadKibana(); ?>
     you will be confronted with a question. What index would
     you like to see?
 </p>
