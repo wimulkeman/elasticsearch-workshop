@@ -50,6 +50,7 @@ echo getHelpResources(
     more about it in the documentation of
     <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html#getting-started-shards-and-replicas">Elasticsearch</a>.
 </p>
+
 <h3>9.2: Find your index stats</h3>
 <p>
     Another way to check if your index is created is by using the tremendous powerful
@@ -64,7 +65,21 @@ echo getHelpResources(
         <li>See if your index name is listed</li>
     </ol>
 </p>
-<h4>9.2.1: What's in the index</h4>
+<p>
+    And done... wait what? It didn't appear before you? What happened? It is there, but not there?
+</p>
+<p>
+    Although we created an index, it is completely empty, and a storage without shelves isn't exactly
+    a storage now is it? It is time to create those shelves and bring a system into it using something
+    called <strong>mapping</strong>.
+</p>
+
+<h4>9.2.1: Bonus: What's in the index</h4>
+<div class="alert alert-warning" role="alert">
+    This section of the exercise will not work until there are some documents
+    in your index. But you can use it after you added some documents, or just as
+    a reference later on.
+</div>
 <p>
     Normally we would want to look into the index also using the discovery tab in the menu. To do that
     we can follow the following steps:<br>
@@ -75,12 +90,6 @@ echo getHelpResources(
         <li>Click on Create Index</li>
         <li>Enter the name of your index, it should be visible in the list under the textbox</li>
     </ol>
-    And done... wait what? It doesn't appear? What happened? It is there, but not there?
-</p>
-<p>
-    Although we created an index, it is completely empty, and a storage without shelves isn't exactly
-    a storage now is it? It is time to create those shelves and bring a system into it using something
-    called <strong>mapping</strong>.
 </p>
 
 <p>
