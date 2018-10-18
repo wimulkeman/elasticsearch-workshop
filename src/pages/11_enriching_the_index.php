@@ -48,6 +48,14 @@ echo getHelpResources(
     Try to add the following fields <strong>birthday</strong> (date field) and
     <strong>times_viewed</strong> (integer field).
 </p>
+<div class="alert alert-warning" role="alert">
+    As we have seen at the end of the previous exercise, you can't update a index
+    which is already created. To make it easier for you, you can load an already
+    existing configuration with the steps of the previous exercise and extend that
+    one. Open it using <?php echo loadJsonFileInKibana('create_basic_hello_world_index_with_a_document.json'); ?>
+    and modify it where needed. Insert the document with only the firstname and lastname fields.<br><br>
+    After updating it, run the steps sequentially as shown in the console.
+</div>
 <?php
 echo getHelpResources(
     [
@@ -58,14 +66,6 @@ echo getHelpResources(
     ]
 );
 ?>
-<div class="alert alert-warning" role="alert">
-    As we have seen at the end of the previous exercise, you can't update a index
-    which is already created. To make it easier for you, you can load an already
-    existing configuration with the steps of the previous exercise and extend that
-    one. Open it using <?php echo loadJsonFileInKibana('create_basic_hello_world_index_with_a_document.json'); ?>
-    and modify it where needed. Insert the document with only the firstname and lastname fields.<br><br>
-    After updating it, run the steps sequentially as shown in the console.
-</div>
 <div class="alert alert-notice" role="alert">
     After adding new fields, you need to refresh your fields in your index pattern
     to see them in the discovery tab. Open <?php echo loadKibana(); ?> > Management >
