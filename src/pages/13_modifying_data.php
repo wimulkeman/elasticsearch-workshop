@@ -74,7 +74,7 @@ echo getHelpResources(
 </p>
 <p>
     After adding the normalizer to your index ad as a document a person with
-    firstname: Björn, lastname: Kaßnner, and try to search for it using as
+    firstname: Björn, lastname: Kaßner, and try to search for it using as
     search terms firstname: bjorn, lastname: kassner.
 </p>
 <?php

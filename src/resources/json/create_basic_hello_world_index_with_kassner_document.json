@@ -19,5 +19,5 @@ PUT hello_world
 POST hello_world/_doc
 {
   "firstname": "Björn",
-  "lastname": "Kaßnner"
+  "lastname": "Kaßner"
 }
